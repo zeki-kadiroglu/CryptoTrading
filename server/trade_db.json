@@ -1,0 +1,223 @@
+{
+    "orders": {
+        "price": "123",
+        "quantity": "12",
+        "username": "qw",
+        "pair": "BTC-USDT",
+        "action": "buy",
+        "time": "2024-05-21 02:41:01.645830"
+    },
+    "users": {
+        "id": "5a1c8774-0078-41f3-b471-b733dda1cd33",
+        "password": "$2b$12$d/qu8bvoOnHFX/IN7nQDPOuiCfn5tjApX5nZoxDWPmgY7Ljon5Fi6",
+        "username": "qw"
+    },
+    "order_book": {
+        "BTC-USDT": {
+            "bids": [
+                {
+                    "price": 50100,
+                    "quantity": 0.5
+                },
+                {
+                    "price": 50050,
+                    "quantity": 0.75
+                },
+                {
+                    "price": 50000,
+                    "quantity": 1.0
+                },
+                {
+                    "price": 49950,
+                    "quantity": 1.25
+                },
+                {
+                    "price": 49900,
+                    "quantity": 1.5
+                }
+            ],
+            "asks": [
+                {
+                    "price": 50200,
+                    "quantity": 0.4
+                },
+                {
+                    "price": 50250,
+                    "quantity": 0.6
+                },
+                {
+                    "price": 50300,
+                    "quantity": 0.8
+                },
+                {
+                    "price": 50350,
+                    "quantity": 1.0
+                },
+                {
+                    "price": 50400,
+                    "quantity": 1.2
+                }
+            ]
+        },
+        "ETH-USDT": {
+            "bids": [
+                {
+                    "price": 4000,
+                    "quantity": 2.0
+                },
+                {
+                    "price": 3995,
+                    "quantity": 2.5
+                },
+                {
+                    "price": 3990,
+                    "quantity": 3.0
+                },
+                {
+                    "price": 3985,
+                    "quantity": 3.5
+                }
+            ],
+            "asks": [
+                {
+                    "price": 4010,
+                    "quantity": 1.5
+                },
+                {
+                    "price": 4015,
+                    "quantity": 2.0
+                },
+                {
+                    "price": 4020,
+                    "quantity": 2.5
+                },
+                {
+                    "price": 4025,
+                    "quantity": 3.0
+                }
+            ]
+        },
+        "LTC-USDT": {
+            "bids": [
+                {
+                    "price": 200,
+                    "quantity": 10
+                },
+                {
+                    "price": 199,
+                    "quantity": 15
+                },
+                {
+                    "price": 198,
+                    "quantity": 20
+                },
+                {
+                    "price": 197,
+                    "quantity": 25
+                },
+                {
+                    "price": 196,
+                    "quantity": 30
+                }
+            ],
+            "asks": [
+                {
+                    "price": 202,
+                    "quantity": 8
+                },
+                {
+                    "price": 203,
+                    "quantity": 10
+                },
+                {
+                    "price": 204,
+                    "quantity": 12
+                },
+                {
+                    "price": 205,
+                    "quantity": 14
+                },
+                {
+                    "price": 206,
+                    "quantity": 16
+                }
+            ]
+        },
+        "XRP-USDT": {
+            "bids": [
+                {
+                    "price": 1.5,
+                    "quantity": 500
+                },
+                {
+                    "price": 1.49,
+                    "quantity": 600
+                },
+                {
+                    "price": 1.48,
+                    "quantity": 700
+                }
+            ],
+            "asks": [
+                {
+                    "price": 1.51,
+                    "quantity": 450
+                },
+                {
+                    "price": 1.52,
+                    "quantity": 500
+                },
+                {
+                    "price": 1.53,
+                    "quantity": 550
+                }
+            ]
+        },
+        "BCH-USDT": {
+            "bids": [
+                {
+                    "price": 800,
+                    "quantity": 1.5
+                },
+                {
+                    "price": 795,
+                    "quantity": 1.8
+                },
+                {
+                    "price": 790,
+                    "quantity": 2.0
+                },
+                {
+                    "price": 785,
+                    "quantity": 2.2
+                },
+                {
+                    "price": 780,
+                    "quantity": 2.5
+                }
+            ],
+            "asks": [
+                {
+                    "price": 810,
+                    "quantity": 1.2
+                },
+                {
+                    "price": 815,
+                    "quantity": 1.4
+                },
+                {
+                    "price": 820,
+                    "quantity": 1.6
+                },
+                {
+                    "price": 825,
+                    "quantity": 1.8
+                },
+                {
+                    "price": 830,
+                    "quantity": 2.0
+                }
+            ]
+        }
+    }
+}
