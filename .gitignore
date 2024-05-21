@@ -89,7 +89,8 @@ celerybeat-schedule
 
 ./.idea/
 ./.idea
-
+.DS_Store
+.DS_Store/
 # Environments
 .env
 .venv
