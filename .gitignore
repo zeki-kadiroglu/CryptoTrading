@@ -122,4 +122,5 @@ dmypy.json
 .vscode
 
 #Pycharm IDE
+.idea.DS_Store
 .idea
