@@ -1,5 +1,6 @@
 # Crypyto Trading
 **To Run Server**
+* ***Attention*** : Python Version: `Python 3.10`. Don't use python version later than `Python 3.10`:
 * Firstly, Python `Virtual Environment` must be create under the `Crypto Trading` folder.
 * Secondly, install requirements.txt using this command `pip install requirements.txt`
 * Then change direction to under the `server` folder after that open command line run this command: `python main.py`
