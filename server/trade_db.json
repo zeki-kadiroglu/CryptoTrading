@@ -3,9 +3,9 @@
         "price": "123",
         "quantity": "12",
         "username": "qw",
-        "pair": "BTC-USDT",
-        "action": "buy",
-        "time": "2024-05-21 02:41:01.645830"
+        "pair": "XRP-USDT",
+        "action": "sell",
+        "time": "2024-05-21 06:31:01.410127"
     },
     "users": {
         "id": "5a1c8774-0078-41f3-b471-b733dda1cd33",

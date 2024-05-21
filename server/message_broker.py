@@ -1,13 +1,15 @@
-import json
+
 import os
 import sys
 
-import pika.exceptions
+
 os.path.join(os.path.dirname(__file__), '../')
 sys.path.append(os.path.join(os.path.dirname(__file__), '../'))
-from fastapi import WebSocket
+import json
+import pika.exceptions
 import pika
 from pika.exchange_type import ExchangeType
+from core.config import settings
 import logging
 
 logging.basicConfig(level=logging.ERROR)
@@ -15,10 +17,6 @@ logging.basicConfig(level=logging.ERROR)
 logger = logging.getLogger("myapp")
 
 class MessageBroker:
-    PORT = 5672
-    RABBITMQ_HOST = '127.0.0.1'
-    USER_NAME = 'guest'
-    PASSWORD = 'guest'
     
     def __init__(self) -> None:
         
@@ -26,15 +24,18 @@ class MessageBroker:
         
         try: 
             # creds
-            self.credentials = pika.PlainCredentials(self.USER_NAME, self.PASSWORD)        
+            self.credentials = pika.PlainCredentials(
+                settings.RABBITMQ_USER_NAME,
+                settings.RABBITMQ_PASSWORD
+                )        
             # Perform connection
             self.connection = pika.BlockingConnection(
                 pika.ConnectionParameters(
                     heartbeat=600,
                     blocked_connection_timeout=300,
                     retry_delay=5, # retry delay in seconds
-                    host=self.RABBITMQ_HOST,
-                    port=self.PORT,
+                    host=settings.RABBITMQ_HOST,
+                    port=settings.RABBITMQ_PORT,
                     credentials=self.credentials
                     )
                 )
@@ -60,12 +61,13 @@ class MessageBroker:
         channel = self.connection.channel()
         
         channel.exchange_declare(
-        exchange='socket', exchange_type=ExchangeType.fanout
+        exchange=settings.RABBITMQ_EXCHANGE,
+        exchange_type=ExchangeType.fanout
         )
         channel.basic_publish(
             body=json.dumps(body),
             routing_key = '',
-            exchange = 'socket'         
+            exchange = settings.RABBITMQ_EXCHANGE    
         )
         self.connection.close()
         
@@ -75,7 +77,7 @@ class MessageBroker:
         # Set the prefetch count to 1 to ensure fair dispatch
         channel.basic_qos(prefetch_count=1)
         channel.exchange_declare(
-            exchange='socket',
+            exchange=settings.RABBITMQ_EXCHANGE,
             exchange_type=ExchangeType.fanout
             )
         # Binding the queue to the exchange
@@ -84,7 +86,7 @@ class MessageBroker:
         
         channel.queue_bind(
             queue=queue_name,
-            exchange='socket'
+            exchange=settings.RABBITMQ_EXCHANGE
             )
         
         channel.basic_consume(
